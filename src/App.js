@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/common/Footer/Footer';
+import Nav from './components/common/Nav/Nav';
+import { NAV_LOGO_WHITE, ROUTE } from './constant/constant';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { PageRoutes } from './constant/ROUTES';
 
-function App() {
+function App() {  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+        <Router>
+          <Nav items={ROUTE} logo={NAV_LOGO_WHITE}/>
+          <Routes>
+            {PageRoutes.map((route) =>{
+              return  <Route key={route.id} path={route.path} element={route.element} />
+            })}
+          </Routes>
+          <Footer />
+        </Router>
     </div>
   );
 }

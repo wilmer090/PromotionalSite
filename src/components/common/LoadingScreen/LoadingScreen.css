@@ -1,0 +1,12 @@
+.loading-screen-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-screen-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

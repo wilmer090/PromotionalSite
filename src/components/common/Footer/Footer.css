@@ -1,0 +1,36 @@
+
+.footer-logo{
+    max-width: 300px;
+    width: 50%;
+}
+
+.footer{
+    padding: 24px 16px 0 16px;
+}
+.footer-logo-container{
+    display: flex;
+}
+.footer-menu-one, .footer-menu-two, .footer-address, .copy-right{
+    padding: 24px;
+}
+.footer-menu-one ul{
+    list-style: none;
+}
+.footer-menu-two ul{
+    list-style: none;
+}
+.footer-grid{
+    max-width: 1200px;
+}
+
+@media (min-width: 1224px){
+    .footer-grid{
+        display: grid;
+        margin: auto;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+    .copy-right{
+        grid-column: span 4;
+    }
+}

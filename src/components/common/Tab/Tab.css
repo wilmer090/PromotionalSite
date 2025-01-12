@@ -1,0 +1,38 @@
+/* TabComponent.css */
+
+/* .tab-container {
+    font-family: Arial, sans-serif;
+ 
+  }
+  
+  .tab-header {
+    display: flex;
+  }
+  
+  .tab-item {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    line-height: 22px;
+    font-family: 'Poppins';
+  }
+  
+  .tab-item:last-child {
+    border-right: 1px solid #ccc;
+  }
+  
+ 
+  
+  .tab-content {
+    padding: 20px;
+  } */
+ 
+ .active {
+    text-decoration: underline;
+    text-decoration-color: #EB7556;
+    text-decoration-thickness: 5px; 
+  }

@@ -1,0 +1,107 @@
+.background-container{
+    min-height: 640px;
+}
+.underline{
+    margin-bottom: 1rem;
+}
+.services{
+    color:#FFFFFF99;
+    letter-spacing: 5px;
+}
+.services-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services-cards-container{
+    max-width:1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-grow:1;
+    padding-block: 4rem;
+    gap:20px;
+}
+.services-cards-body{
+    flex-grow: 1;
+}
+.services-cards-body ul li{
+    margin-left:1em;
+    padding-block: 0.2em;
+}
+.services-cards-body{
+    padding-block:1em;
+}
+.services-card{
+    border: 1px solid #793ECC;
+    padding: 1.5rem;
+    min-width: 330px;
+    min-height: 350px;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    
+}
+.services-card-header{
+    max-width:338px;
+    text-align: center;
+    min-height: 84px;
+}
+.services-brief-container{
+  max-width: 1200px;
+}
+.services-row{
+    display: flex;
+    margin-bottom: 4rem;
+}
+.col-1{
+    width: 40%;
+}
+.col-2{
+    width: 60%;
+}
+.col-2 h2{
+    margin-bottom: 1.5rem;
+}
+.service-name{
+    max-width: 270px;
+    background-image: url(https://m2comms.com/wp-content/uploads/2022/09/Text-Chevron-svg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    padding-left: 1rem;
+}
+.services-brief-name-container{
+    display: flex;
+    gap:20px;
+}
+.service-count{
+    color: rgb(121, 62, 204);
+    font-weight: 700;
+    font-family: 'Poppins sans-serif';
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    .services-cards-container{
+        flex-direction: column;
+    }
+    .services-brief-name-container{
+        flex-direction: column;
+    }
+    .services-row{
+        flex-direction: column;
+        padding:20px;
+    }
+    .services-row .col-1, .col-2{
+        width: 100%;
+    }
+    .service-name{
+        max-width: unset;
+    }
+    .services-card{
+        min-width: unset;
+    }
+    .background-text-holder{
+        padding: 20px;
+    }
+}

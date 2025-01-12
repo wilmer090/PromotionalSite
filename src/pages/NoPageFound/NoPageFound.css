@@ -1,0 +1,21 @@
+.container{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.content{
+    text-align: center;
+}
+.four_O_four_text{
+    color: #282E38;
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+.four_O_four_btn{
+    background-color: rgb(24, 67, 65);
+    color: #fff;
+    padding: 1em;
+    margin: 10px;
+}
