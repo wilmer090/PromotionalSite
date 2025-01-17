@@ -7,7 +7,13 @@ const useFetch = (url) =>{
 
     useEffect(() => {
 
+        let isCancelled = false;
+
         const fetchData = async () =>{
+
+            setIsLoading(true);
+            setData([]); // Reset data when the fetch starts
+            setError(null);
 
             try{
                 const response = await fetch(`${url}`);
@@ -16,16 +22,28 @@ const useFetch = (url) =>{
                 }
                 const data = await response.json();
 
-                setData(data);
+                if (!isCancelled) {
+                    setData(data); // Only update state if not cancelled
+                }
             }
             catch(e){
-                setError(e.message)
+                if (!isCancelled) {
+                    setError(e.message); // Only update state if not cancelled
+                }
             }
             finally{
-                setIsLoading(false)
+                if (!isCancelled) {
+                    setIsLoading(false); // Only update state if not cancelled
+                }
             }
-        }
+        };
+        
         fetchData();
+
+        return () => {
+            isCancelled = true; // Cleanup to avoid state updates after unmount
+        };
+
     }, [url]);
 
     return {data, isLoading, error}

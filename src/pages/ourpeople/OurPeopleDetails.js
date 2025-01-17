@@ -49,7 +49,7 @@ const OurPeopleDetails = () => {
   
     return (
         <LoadingErrorHandler isLoading={isLoading} error={error} data={data}>
-            <PersonDetails firstname={data?.firstname} lastname={data?.lastname} company={data?.company} email={data?.email} />
+            <PersonDetails key={id} firstname={data?.firstname} lastname={data?.lastname} company={data?.company} email={data?.email} />
         </LoadingErrorHandler>
     );
 };
